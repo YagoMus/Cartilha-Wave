@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartilha de Benefícios - Novo Modelo</title>
+    <!-- Link para a fonte Poppins do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Link para o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Definindo as cores personalizadas do Tailwind CSS */
+        :root {
+            --color-primary: #2D3748; /* Azul escuro da logo */
+            --color-secondary: #E53E3E; /* Vermelho da logo */
+            --color-accent: #A0AEC0; /* Cinza/prata da logo */
+        }
+        .bg-primary {
+            background-color: var(--color-primary);
+        }
+        .text-primary {
+            color: var(--color-primary);
+        }
+        .bg-secondary {
+            background-color: var(--color-secondary);
+        }
+        .text-secondary {
+            color: var(--color-secondary);
+        }
+        .bg-accent {
+            background-color: var(--color-accent);
+        }
+        .text-accent {
+            color: var(--color-accent);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7fafc; /* Cor de fundo suave */
+        }
+        /* Estilos para o acordeão */
+        .accordion-item {
+            border-bottom: 1px solid #e2e8f0; /* Cor da borda do Tailwind gray-200 */
+        }
+        .accordion-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .accordion-header.active .accordion-icon {
+            transform: rotate(90deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Um valor grande o suficiente para a maioria dos conteúdos */
+            padding-bottom: 1rem;
+        }
+        .accordion-content ul {
+            padding-left: 1.5rem; /* Indentação da lista */
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-primary py-6 shadow-lg">
+        <div class="container mx-auto px-4 flex items-center justify-center">
+            <!-- Título da cartilha -->
+            <h1 class="text-white text-4xl font-bold">Cartilha de Benefícios</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold text-primary mb-6 text-center">Bem-vindo à família Wave!</h2>
+            <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto">
+                Na Academia Wave, valorizamos cada um de nossos colaboradores. Esta cartilha foi criada para apresentar os benefícios exclusivos que preparamos para você, pensando no seu bem-estar, desenvolvimento e reconhecimento.
+            </p>
+        </section>
+
+        <!-- Seção de Benefícios por Setor (Acordeão) -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-semibold text-primary mb-6 text-center">Benefícios por Setor</h2>
+
+            <div id="accordion-container">
+                <!-- Setor Limpeza -->
+                <div class="accordion-item">
+                    <div class="accordion-header text-xl font-semibold text-primary hover:text-secondary transition-colors duration-200">
+                        Setor Limpeza
+                        <span class="accordion-icon">▶</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Plano de saúde online</li>
+                            <li>Aulas de Pilates</li>
+                            <li>Academia com acompanhamento</li>
+                            <li>Terapia em grupo</li>
+                            <li>Bônus de assiduidade</li>
+                            <li>Vale alimentação</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Setor Estacionamento -->
+                <div class="accordion-item">
+                    <div class="accordion-header text-xl font-semibold text-primary hover:text-secondary transition-colors duration-200">
+                        Setor Estacionamento
+                        <span class="accordion-icon">▶</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Academia com acompanhamento</li>
+                            <li>Vale alimentação</li>
+                            <li>Plano de saúde online</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Setor Musculação -->
+                <div class="accordion-item">
+                    <div class="accordion-header text-xl font-semibold text-primary hover:text-secondary transition-colors duration-200">
+                        Setor Musculação
+                        <span class="accordion-icon">▶</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Taxa de Personal acima de 20 horas semanais</li>
+                            <li>Bônus de produtividade</li>
+                            <li>Vale alimentação</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Setor Ginástica -->
+                <div class="accordion-item">
+                    <div class="accordion-header text-xl font-semibold text-primary hover:text-secondary transition-colors duration-200">
+                        Setor Ginástica
+                        <span class="accordion-icon">▶</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Taxa de pessoal acima de 10 horas semanais</li>
+                            <li>Bônus médio das aulas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Setor Piscina -->
+                <div class="accordion-item">
+                    <div class="accordion-header text-xl font-semibold text-primary hover:text-secondary transition-colors duration-200">
+                        Setor Piscina
+                        <span class="accordion-icon">▶</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Taxa de pessoas acima de 10 horas semanais</li>
+                            <li>Bônus de produtividade</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Setor Manutenção -->
+                <div class="accordion-item">
+                    <div class="accordion-header text-xl font-semibold text-primary hover:text-secondary transition-colors duration-200">
+                        Setor Manutenção
+                        <span class="accordion-icon">▶</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Plano de saúde online</li>
+                            <li>Academia com acompanhamento</li>
+                            <li>Vale alimentação</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Setor de Recepção -->
+                <div class="accordion-item">
+                    <div class="accordion-header text-xl font-semibold text-primary hover:text-secondary transition-colors duration-200">
+                        Setor de Recepção
+                        <span class="accordion-icon">▶</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Academia com acompanhamento</li>
+                            <li>Bônus de produtividade aos domingos</li>
+                            <li>Bônus de meta</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Setor de Vendas -->
+                <div class="accordion-item">
+                    <div class="accordion-header text-xl font-semibold text-primary hover:text-secondary transition-colors duration-200">
+                        Setor de Vendas
+                        <span class="accordion-icon">▶</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Academia com acompanhamento</li>
+                            <li>Comissão de meta</li>
+                            <li>Plano de saúde online</li>
+                            <li>Vale alimentação</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NOVO: Setor Estagiário -->
+                <div class="accordion-item">
+                    <div class="accordion-header text-xl font-semibold text-primary hover:text-secondary transition-colors duration-200">
+                        Estagiários
+                        <span class="accordion-icon">▶</span>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Forma de reajuste de Salário depois de 4 meses</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary py-6 mt-8">
+        <div class="container mx-auto px-4 text-center text-white">
+            <p>&copy; Academia Wave 2025. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const accordionContent = header.nextElementSibling;
+                    const accordionIcon = header.querySelector('.accordion-icon');
+
+                    // Fecha todos os outros acordeões
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== header && otherHeader.classList.contains('active')) {
+                            otherHeader.classList.remove('active');
+                            otherHeader.nextElementSibling.classList.remove('open');
+                            otherHeader.nextElementSibling.style.maxHeight = 0;
+                            otherHeader.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Alterna o estado do acordeão clicado
+                    header.classList.toggle('active');
+                    accordionContent.classList.toggle('open');
+
+                    if (accordionContent.classList.contains('open')) {
+                        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px"; // Ajusta a altura para o conteúdo
+                        accordionIcon.style.transform = 'rotate(90deg)';
+                    } else {
+                        accordionContent.style.maxHeight = 0;
+                        accordionIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
